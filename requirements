@@ -1,0 +1,16 @@
+1. Ensure pip3 and python3 is installed
+2. Install the following packages using pip3 
+
+pip3 install argparse,json
+pip3 install operator
+pip3 install --upgrade google-api-python-client
+pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2
+pip3 install flask 
+pip3 install wtforms
+
+
+Additional
+
+pip install jinja
+pip install webapp2
+pip install webob
