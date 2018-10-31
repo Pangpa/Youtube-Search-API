@@ -3,14 +3,16 @@
 Flask web application for [Youtube APIv3](https://developers.google.com/youtube/v3/getting-started)  
 ==========================================
 
-Youtube API v3 implementation using [flask](http://flask.pocoo.org/) web app and [jinja2](http://jinja.pocoo.org/docs/2.10/) template.
+> Youtube API v3 implementation using [flask](http://flask.pocoo.org/) web app and [jinja2](http://jinja.pocoo.org/docs/2.10/) template.
 
 
 ### List of files
+
 * server.py            Backend of app for GET and POST request to serve index.html  
 * index.html           Frontend of app based on bootstrap and jinja2 template  
 * client_secret.json   Authentication information of this application  
 * search.py            Module to get search result using Youtube API  
+
 
 ## Getting Started
 
@@ -35,9 +37,9 @@ Youtube API v3 implementation using [flask](http://flask.pocoo.org/) web app and
  python3 server.py
 ```
  #### 2. Launch the web app:
-  ```shell
-Navigate to http://localhost:8090 to launch app. 
-```
+ 
+Navigate to  http://localhost:8090 to launch app. 
+
 
 Enter the search term in search box and click submit.Now results with thumbnails will be displayed. Click on thumbnail to redirect to video. 
 
