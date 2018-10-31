@@ -3,10 +3,8 @@
 Flask web application for [Youtube APIv3](https://developers.google.com/youtube/v3/getting-started)  
 ==========================================
 
-Youtube API v3 implementation using flask web app and jinja2 template.
+Youtube API v3 implementation using [flask](http://flask.pocoo.org/) web app and [jinja2](http://jinja.pocoo.org/docs/2.10/) template.
 
-
-## Getting Started
 
 ### List of files
 * server.py            Backend of app for GET and POST request to serve index.html  
@@ -14,6 +12,7 @@ Youtube API v3 implementation using flask web app and jinja2 template.
 * client_secret.json   Authentication information of this application  
 * search.py            Module to get search result using Youtube API  
 
+## Getting Started
 
 ### Prerequisites
 
@@ -35,9 +34,11 @@ Youtube API v3 implementation using flask web app and jinja2 template.
  ```shell
  python3 server.py
 ```
- #### 2.Launch the web app:
+ #### 2. Launch the web app:
   ```shell
-Navigate to [http://localhost:8090](https://localhost:8090) to launch app. 
+Navigate to http://localhost:8090 to launch app. 
 ```
 
-Enter the search term in search box and click submit. Now results with thumbnails will be displayed.Click on thumbnail to redirect to video. Click on any of the two button (Name, Published Date) to sort accordingly because It is  assumed to sort via buttons. Sorting output will be by default ascending.
+Enter the search term in search box and click submit.Now results with thumbnails will be displayed.Click on thumbnail to redirect to video. 
+
+Click on any of the two button (Name, Published Date) to sort accordingly because It is  assumed to sort via buttons. Sorting output will be by default ascending.
