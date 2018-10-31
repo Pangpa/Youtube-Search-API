@@ -9,10 +9,10 @@ Youtube API v3 implementation using flask web app and jinja2 template.
 ## Getting Started
 
 ### List of files
-1. server.py            Backend of app for GET and POST request to serve index.html  
-2. index.html           Frontend of app based on bootstrap and jinja2 template  
-3. client_secret.json   Authentication information of this application  
-4. search.py            Module to get search result using Youtube API  
+* server.py            Backend of app for GET and POST request to serve index.html  
+* index.html           Frontend of app based on bootstrap and jinja2 template  
+* client_secret.json   Authentication information of this application  
+* search.py            Module to get search result using Youtube API  
 
 
 ### Prerequisites
