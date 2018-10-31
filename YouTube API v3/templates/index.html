@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1024px;
+    	}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">     
+        <div class="col-sm-5 col-sm-offset-1">
+          <h1>YouTube Search </h1>
+          <br> 
+	  <form role="form" method="POST" action="/">
+	      <div class="form-group">
+                <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter Search Term..." style="max-width: 300px;">
+	      </div> 
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form><br>
+	  <div class="row">	  
+		<div class = "col-sm-5"><h4>Sort By</h4></div>
+	  </div>
+	  <div class = "row" style="display:inline-block">
+		<div class = "col-sm-5">
+		    <button onclick = "sortName(0)" type="button" class="btn btn-primary">Name</button>
+		</div>	
+                    <button onclick = "sortName(1)" type="button" class="btn btn-primary">Published Date</button>
+		
+          </div>
+          <br>
+          {% for error in errors %}
+            <h4>{{ error }}</h4>
+          {% endfor %}
+          <br>
+        </div>
+     </div>
+        <div class="col-sm-5 col-sm-offset-1">
+          {% if results %}
+            <h2> Results </h2>
+            <br>
+            <div id="results">
+              <table class="table table-striped" id ="result_table" style=max-width: 3000px;>
+                <thead>
+                  <tr>
+		    <th scope="col"></th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Published At</th>
+                  </tr>
+                </thead>
+                {% for item in results|dictsort(false, 'value') %}		
+                	  
+		  <tr>
+                    <td><a href="https://www.youtube.com/watch?v={{item[1][2]}}"><IMG src = {{ item[1][1]['url'] }}></a></td>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1][0]}}</td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+          {% endif %}
+        </div>
+    </div>
+    <br><br>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+	function sortName(col){               
+		table = document.getElementById("result_table");
+		rows = table.rows;
+		for (i = 1 ; i < rows.length-1;i++){
+			for (j= 1; j < rows.length-i-1;j++){
+				x = rows[j].getElementsByTagName("TD")[col];//x=rows[i].getElementsByTagName("TD")[1];
+				y = rows[j+1].getElementsByTagName("TD")[col];
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase())
+					rows[j].parentNode.insertBefore(rows[j+1],rows[j]);			}
+		}
+		console.log(col);
+	}
+	//sortName({{data|safe}})
+    </script>
+  </body>
+</html>
