@@ -39,6 +39,6 @@ Youtube API v3 implementation using [flask](http://flask.pocoo.org/) web app and
 Navigate to http://localhost:8090 to launch app. 
 ```
 
-Enter the search term in search box and click submit.Now results with thumbnails will be displayed.Click on thumbnail to redirect to video. 
+Enter the search term in search box and click submit.Now results with thumbnails will be displayed. Click on thumbnail to redirect to video. 
 
 Click on any of the two button (Name, Published Date) to sort accordingly because It is  assumed to sort via buttons. Sorting output will be by default ascending.
